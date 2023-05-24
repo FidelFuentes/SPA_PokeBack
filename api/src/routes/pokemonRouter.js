@@ -2,7 +2,7 @@
 const {Router}=require('express');
 const pokemonRouter=Router();
 const {getPokemonByIdHandler}=require('../handlers/getPokemonByIdHandler')
-const {createPokemonHandler} = require('../handlers/CreatePokemonHandler');
+const {createPokemonHandler} = require('../handlers/createPokemonHandler');
 const {getAllPokemonHandler}=require('../handlers/getAllPokemonHandler')
 const {deletePokemonHandler}= require('../handlers/deletePokemonHandler')
 
