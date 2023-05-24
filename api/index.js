@@ -20,11 +20,11 @@
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js'); // Importa la conexión a la base de datos definida en db.js
 
-const PORT=3001
+const port =process.env.PORT_S || 3001
 
 // force true nos resetea nuestra base de datos.
 conn.sync({ force: true }).then(() => { // Sincroniza los modelos de la base de datos y luego inicia el servidor
-  server.listen(PORT, () => {
-    console.log(`%s listening at ${PORT}`); // eslint-disable-line no-console
+  server.listen(port, () => {
+    console.log(`%s listening at ${port}`); // eslint-disable-line no-console
   });
 });
