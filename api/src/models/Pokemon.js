@@ -19,7 +19,7 @@ module.exports = (sequelize) => {
     },
     image: {
       type: DataTypes.TEXT,
-      allowNull: false
+    //  allowNull: false
     },
     life: {
       type: DataTypes.INTEGER,
@@ -27,7 +27,7 @@ module.exports = (sequelize) => {
     },
     attack: {
       type: DataTypes.INTEGER,
-     // allowNull: false
+      allowNull: false
     },
     defense: {
       type: DataTypes.INTEGER,
