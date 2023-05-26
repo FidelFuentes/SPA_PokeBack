@@ -16,7 +16,9 @@ const createPokemonHandler = async (req, res) => {
   try {
     let image;
 if (req.file) {
-  image = req.file.buffer.toString('base64');
+  // Aquí convertimos la imagen en base64
+  const base64Data = req.file.buffer.toString('base64');
+  image = base64Data;
 }
     
     // Crear el Pokemon en la base de datos

@@ -25,7 +25,7 @@ const createPokemon = async (name, life, attack, defense, speed, height, weight,
     const [type] = await Type.findOrCreate({ where: { name: typeName } });
     await newPokemon.addType(type);
   }
-
+    console.log(newPokemon)
   return newPokemon;
 }catch (error) {
   if (error.name === 'SequelizeUniqueConstraintError') {

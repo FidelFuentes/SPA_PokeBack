@@ -18,7 +18,7 @@ module.exports = (sequelize) => {
       unique: true
     },
     image: {
-      type: DataTypes.TEXT,
+      type: DataTypes.BLOB,
     //  allowNull: false
     },
     life: {
