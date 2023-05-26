@@ -16,8 +16,8 @@ const createPokemonHandler = async (req, res) => {
   try {
     let image;
     if (req.file) {
-      // La imagen subida se encuentra en req.file.path
-      image = req.file.path; 
+      
+      image = req.body.image; // cadena Base 64
       
     }
     
