@@ -15,11 +15,9 @@ const createPokemonHandler = async (req, res) => {
 
   try {
     let image;
-    if (req.file) {
-      
-      image = req.body.image; // cadena Base 64
-      
-    }
+if (req.file) {
+  image = req.file.buffer.toString('base64');
+}
     
     // Crear el Pokemon en la base de datos
     const createdPokemon = await createPokemon(name, life, attack, defense, speed, height, weight, types, image);
